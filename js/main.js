@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── NAVBAR SCROLL ──────────────────────────────────────── */
   const navbar = document.querySelector('.navbar');
+  let scrollTimeout;
   if (navbar) {
     window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
   }
@@ -42,11 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.classList.add('visible');
+          requestAnimationFrame(() => {
+            e.target.classList.add('visible');
+          });
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
     revealEls.forEach(el => observer.observe(el));
   }
 
