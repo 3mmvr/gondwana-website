@@ -346,7 +346,7 @@ body.rtl .highlight-block{border-left:none;border-right:4px solid var(--gold);}
 /* SUCCESS MODAL */
 #contact-success-modal{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s cubic-bezier(.25,.46,.45,.94);}
 #contact-success-modal.show{opacity:1;}
-.modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);backdrop-filter:blur(4px);}
+.modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.4);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;}
 .modal-content{position:relative;background:var(--white);border-radius:4px;padding:48px 40px;max-width:420px;text-align:center;box-shadow:var(--shadow-lg);animation:slideUp .4s cubic-bezier(.25,.46,.45,.94);}
 .modal-icon{width:64px;height:64px;background:linear-gradient(135deg,#d4f8d4 0%,#c0f0c0 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:#27ae60;}
 .modal-content h2{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:12px;text-transform:uppercase;letter-spacing:.08em;}

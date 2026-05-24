@@ -83,17 +83,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── FORM SUBMIT (demo) ─────────────────────────────────── */
-  const form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('[type=submit]');
-      const orig = btn.textContent;
-      btn.textContent = 'Sent!';
-      btn.disabled = true;
-      setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 3000);
-    });
-  }
+  /* ── FORM SUBMIT WITH SUCCESS MODAL ────────────────────── */
+  window.handleSubmit = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('[type=submit]');
+    
+    // Disable button and show loading state
+    btn.disabled = true;
+    const origHTML = btn.innerHTML;
+    btn.innerHTML = '<span style="opacity:0.7;">Sending...</span>';
+    
+    // Create and show modal after brief delay
+    setTimeout(() => {
+      // Create modal overlay
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h2>Thank You!</h2>
+          <p>Our team will contact you soon</p>
+          <button class="btn btn-gold" onclick="this.closest('.modal-overlay').remove(); location.reload();">Close</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      
+      // Reset form
+      form.reset();
+      btn.innerHTML = origHTML;
+      btn.disabled = false;
+    }, 1500);
+  };
 
 });
