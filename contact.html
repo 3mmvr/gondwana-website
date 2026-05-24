@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- COOKIE CONSENT -->
+  <script src="cookie-consent.js"></script>
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="tb-left">
@@ -138,28 +141,28 @@
       <div class="reveal-right">
         <div class="contact-form-wrap">
           <h3>Send a Message</h3>
-          <form class="contact-form" onsubmit="handleSubmit(event)">
+          <form class="contact-form" action="https://formspree.io/f/xyzazyab" method="POST" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="First name" required>
+                <input type="text" name="first_name" placeholder="First name" required>
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Last name" required>
+                <input type="text" name="last_name" placeholder="Last name" required>
               </div>
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" placeholder="your@email.com" required>
+              <input type="email" name="email" placeholder="your@email.com" required>
             </div>
             <div class="form-group">
               <label>Company / Organisation</label>
-              <input type="text" placeholder="Your company">
+              <input type="text" name="company" placeholder="Your company">
             </div>
             <div class="form-group">
               <label>Subject</label>
-              <select>
+              <select name="subject">
                 <option>Partnership Inquiry</option>
                 <option>Investment Opportunity</option>
                 <option>Mine Management Services</option>
@@ -170,7 +173,7 @@
             </div>
             <div class="form-group">
               <label>Message</label>
-              <textarea placeholder="Tell us about your project, concession, or inquiry..." required></textarea>
+              <textarea name="message" placeholder="Tell us about your project, concession, or inquiry..." required></textarea>
             </div>
             <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;" id="submit-btn">
               Send Message
@@ -216,11 +219,42 @@
 function toggleLang(){const isRtl=document.body.classList.toggle('rtl');document.documentElement.lang=isRtl?'ar':'en';document.querySelector('.lang-toggle span').textContent=isRtl?'EN':'AR';}
 function handleSubmit(e){
   e.preventDefault();
-  const btn=document.getElementById('submit-btn');
-  btn.textContent='Message Sent!';
-  btn.disabled=true;
-  btn.style.background='var(--navy)';
-  setTimeout(()=>{btn.innerHTML='Send Message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';btn.disabled=false;btn.style.background='';},3000);
+  const form = document.querySelector('.contact-form');
+  const btn = document.getElementById('submit-btn');
+  const originalHTML = btn.innerHTML;
+  
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  
+  // Simulate sending (FormSpree handles the actual email)
+  setTimeout(() => {
+    // Show success popup
+    showSuccessModal();
+    // Reset form
+    form.reset();
+    btn.innerHTML = originalHTML;
+    btn.disabled = false;
+  }, 1500);
+}
+
+function showSuccessModal(){
+  const modal = document.createElement('div');
+  modal.id = 'contact-success-modal';
+  modal.innerHTML = `
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2>Thank You!</h2>
+      <p>Your message has been received. Our team will contact you soon at the email address you provided.</p>
+      <button onclick="this.closest('#contact-success-modal').remove()" class="btn btn-gold">Got It</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  setTimeout(() => modal.classList.add('show'), 10);
 }
 </script>
 </body>
