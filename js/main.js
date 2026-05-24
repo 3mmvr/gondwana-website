@@ -104,8 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="modal-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h2>Thank You!</h2>
-          <p>Our team will contact you soon</p>
+          <p style="font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.8;">Thank You! Our team will contact you soon.</p>
           <button class="btn btn-gold" onclick="this.closest('.modal-overlay').remove(); location.reload();">Close</button>
         </div>
       `;
