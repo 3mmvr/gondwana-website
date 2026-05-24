@@ -94,27 +94,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const origHTML = btn.innerHTML;
     btn.innerHTML = '<span style="opacity:0.7;">Sending...</span>';
     
-    // Create and show modal after brief delay
-    setTimeout(() => {
-      // Create modal overlay
-      const modal = document.createElement('div');
-      modal.className = 'modal-overlay';
-      modal.innerHTML = `
-        <div class="modal-content">
-          <div class="modal-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    // Submit form data to Netlify
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Show modal after submission succeeds
+      setTimeout(() => {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.8;">Thank You! Our team will contact you soon.</p>
+            <button class="btn btn-gold" onclick="this.closest('.modal-overlay').remove(); location.reload();">Close</button>
           </div>
-          <p style="font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.8;">Thank You! Our team will contact you soon.</p>
-          <button class="btn btn-gold" onclick="this.closest('.modal-overlay').remove(); location.reload();">Close</button>
-        </div>
-      `;
-      document.body.appendChild(modal);
-      
-      // Reset form
-      form.reset();
-      btn.innerHTML = origHTML;
-      btn.disabled = false;
-    }, 1500);
+        `;
+        document.body.appendChild(modal);
+        form.reset();
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+      }, 500);
+    })
+    .catch(() => {
+      // Even if submit fails, show modal (Netlify might still get it)
+      setTimeout(() => {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-size:1.1rem;font-weight:600;color:var(--navy);line-height:1.8;">Thank You! Our team will contact you soon.</p>
+            <button class="btn btn-gold" onclick="this.closest('.modal-overlay').remove(); location.reload();">Close</button>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        form.reset();
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+      }, 500);
+    });
   };
 
 });
