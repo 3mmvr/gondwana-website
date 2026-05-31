@@ -1,9 +1,89 @@
 /* ============================================================
    GONDWANA MINING — main.js
-   Navbar scroll, mobile menu, tabs, scroll reveal, lang toggle
+   Navbar scroll, mobile menu, tabs, scroll reveal, lang toggle, translations
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+// Global translations object - also expose on window
+let translations = {};
+window.translations = translations;
+
+// Load translations from JSON file
+async function loadTranslations() {
+  try {
+    const response = await fetch('/js/translations.json');
+    translations = await response.json();
+    window.translations = translations;
+  } catch (error) {
+    console.error('Error loading translations:', error);
+  }
+}
+
+// Set language and apply translations
+function setLanguage(lang) {
+  const isArabic = lang === 'ar';
+  
+  // Update DOM attributes
+  document.documentElement.lang = lang;
+  document.body.classList.toggle('rtl', isArabic);
+  
+  // Update topbar buttons
+  document.querySelectorAll('.lang-toggle span').forEach(btn => {
+    btn.textContent = isArabic ? 'EN' : 'AR';
+  });
+  
+  // Update mobile buttons
+  document.querySelectorAll('.mobile-lang-toggle span').forEach(btn => {
+    btn.textContent = isArabic ? 'Switch to English' : 'Switch to Arabic';
+  });
+  
+  // Save preference to localStorage
+  localStorage.setItem('gondwana-language', lang);
+  
+  // Translate all elements with data-i18n attribute
+  translatePage(lang);
+}
+
+// Translate page content based on data-i18n attributes
+function translatePage(lang) {
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const keys = key.split('.');
+    
+    let value = translations[lang];
+    for (let k of keys) {
+      value = value?.[k];
+    }
+    
+    if (value) {
+      element.innerHTML = value;
+    }
+  });
+
+  // Translate placeholders
+  const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+  placeholderElements.forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    const keys = key.split('.');
+    
+    let value = translations[lang];
+    for (let k of keys) {
+      value = value?.[k];
+    }
+    
+    if (value) {
+      element.placeholder = value;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Load translations first
+  await loadTranslations();
+  
+  // Get saved language preference or default to English
+  const savedLanguage = localStorage.getItem('gondwana-language') || 'en';
+  setLanguage(savedLanguage);
 
   /* ── NAVBAR SCROLL ──────────────────────────────────────── */
   const navbar = document.querySelector('.navbar');
@@ -69,17 +149,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── LANGUAGE TOGGLE ────────────────────────────────────── */
-  const langBtns = document.querySelectorAll('.lang-toggle, .lang-btn');
-  langBtns.forEach(btn => {
+  document.querySelectorAll('.lang-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
-      const current = document.documentElement.lang || 'en';
-      const next = current === 'en' ? 'ar' : 'en';
-      // In a real app this would swap content; here we just update UI
-      document.documentElement.lang = next;
-      document.body.classList.toggle('rtl', next === 'ar');
-      langBtns.forEach(b => {
-        b.querySelector('span') && (b.querySelector('span').textContent = next === 'en' ? 'AR' : 'EN');
-      });
+      const currentLang = localStorage.getItem('gondwana-language') || 'en';
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      setLanguage(newLang);
+    });
+  });
+
+  document.querySelectorAll('.mobile-lang-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentLang = localStorage.getItem('gondwana-language') || 'en';
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      setLanguage(newLang);
     });
   });
 

@@ -18,19 +18,19 @@
     <div class="tb-left">
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.1 6.1l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <a href="tel:+250796880040">+250 796 880 040</a>
+        <a href="tel:+250796880040"><span data-i18n="topbar.phone"></span>+250 796 880 040</span></a>
       </span>
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@gondwanamining.com">info@gondwanamining.com</a>
+        <a href="mailto:info@gondwanamining.com"><span data-i18n="topbar.email">info@gondwanamining.com</span></a>
       </span>
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Kigali, Rwanda
+        <span data-i18n="topbar.location">Kigali, Rwanda</span>
       </span>
     </div>
     <div class="tb-right">
-      <button class="lang-toggle" onclick="toggleLang()">
+      <button class="lang-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span>AR</span>
       </button>
@@ -47,13 +47,13 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="team.html" class="nav-link">Team</a>
-      <a href="network.html" class="nav-link">Network</a>
-      <a href="contact.html" class="nav-link nav-cta">Contact Us</a>
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+      <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+      <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
+      <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
+      <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
     </div>
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -63,13 +63,20 @@
   <!-- MOBILE NAV -->
   <div class="mobile-nav">
     <button class="mobile-close" aria-label="Close">&times;</button>
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="team.html" class="nav-link">Team</a>
-    <a href="network.html" class="nav-link">Network</a>
-    <a href="contact.html" class="nav-link nav-cta">Contact Us</a>
+    <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+    <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+    <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+    <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
+    <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
+    <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
+    
+    <!-- Language Toggle for Mobile -->
+    <div class="mobile-lang-divider"></div>
+    <button class="mobile-lang-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>Switch to Arabic</span>
+    </button>
   </div>
 
 <!-- HERO -->
@@ -77,21 +84,21 @@
   <div class="hero-bg" style="background-image:url('images/hero.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Africa's Mining Partner</div>
-    <h1>Pioneering<br>Mining Management<br>Across Africa</h1>
-    <p class="hero-sub">Geological expertise, integrated logistics, and sustainable field operations — from Rwanda to the heart of Africa.</p>
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Africa's Mining Partner</div>
+    <h1 data-i18n="hero.headline">Pioneering<br>Mining Management<br>Across Africa</h1>
+    <p class="hero-sub" data-i18n="hero.subheadline">Geological expertise, integrated logistics, and sustainable field operations — from Rwanda to the heart of Africa.</p>
     <div class="hero-actions">
       <a href="services.html" class="btn btn-gold">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        Explore Services
+        <span data-i18n="hero.exploreBtn">Explore Services</span>
       </a>
-      <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
+      <a href="contact.html" class="btn btn-outline-white" data-i18n="hero.contactBtn">Contact Us</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Countries</span></div>
-      <div class="stat"><span class="stat-n">4</span><span class="stat-l">Founding Experts</span></div>
-      <div class="stat"><span class="stat-n">6+</span><span class="stat-l">Projects Delivered</span></div>
-      <div class="stat"><span class="stat-n">20+</span><span class="stat-l">Years Combined Expertise</span></div>
+      <div class="stat"><span class="stat-n" data-i18n="stats.stat1_num">8+</span><span class="stat-l" data-i18n="stats.stat1_label">Countries</span></div>
+      <div class="stat"><span class="stat-n" data-i18n="stats.stat2_num">4</span><span class="stat-l" data-i18n="stats.stat2_label">Founding Experts</span></div>
+      <div class="stat"><span class="stat-n" data-i18n="stats.stat3_num">6+</span><span class="stat-l" data-i18n="stats.stat3_label">Projects Delivered</span></div>
+      <div class="stat"><span class="stat-n" data-i18n="stats.stat4_num">20+</span><span class="stat-l" data-i18n="stats.stat4_label">Years Combined Expertise</span></div>
     </div>
   </div>
 </section>
@@ -99,16 +106,16 @@
 <!-- TICKER STRIP -->
 <div class="feature-strip">
   <div class="feature-strip-inner">
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Mine Management</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Logistics Services</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Geological Exploration</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>Integrated Field Services</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rwanda HQ · Dubai Branch</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Mine Management</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Logistics Services</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Geological Exploration</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>Integrated Field Services</div>
-    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rwanda HQ · Dubai Branch</div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="ticker.item1">Mine Management</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="ticker.item2">Logistics Services</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span data-i18n="ticker.item3">Geological Exploration</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg><span data-i18n="ticker.item4">Integrated Field Services</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="ticker.item5">Rwanda HQ · Dubai Branch</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="ticker.item1">Mine Management</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="ticker.item2">Logistics Services</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span data-i18n="ticker.item3">Geological Exploration</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg><span data-i18n="ticker.item4">Integrated Field Services</span></div>
+    <div class="feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="ticker.item5">Rwanda HQ · Dubai Branch</span></div>
   </div>
 </div>
 
@@ -117,19 +124,19 @@
   <div class="inner">
     <div class="two-col">
       <div class="reveal-left">
-        <div class="eyebrow">About Gondwana</div>
-        <h2 class="section-headline">A Leader in Africa's Mining Sector</h2>
-        <p class="section-sub" style="margin-bottom:20px;">Gondwana Mining Management & Services Ltd is one of the emerging and pioneering companies in mining operations management and integrated logistical and technical services in Africa.</p>
-        <p class="section-sub" style="margin-bottom:32px;">Established in Kigali, Rwanda in 2025, the company serves as an administrative and organizational hub for mining projects across Africa — particularly in Sudan, South Sudan, Central African Republic, Chad, Cameroon, Angola, and Gabon.</p>
+        <div class="eyebrow" data-i18n="about_intro.eyebrow">About Gondwana</div>
+        <h2 class="section-headline" data-i18n="about_intro.headline">A Leader in Africa's Mining Sector</h2>
+        <p class="section-sub" style="margin-bottom:20px;" data-i18n="about_intro.paragraph1">Gondwana Mining Management & Services Ltd is one of the emerging and pioneering companies in mining operations management and integrated logistical and technical services in Africa.</p>
+        <p class="section-sub" style="margin-bottom:32px;" data-i18n="about_intro.paragraph2">Established in Kigali, Rwanda in 2025, the company serves as an administrative and organizational hub for mining projects across Africa — particularly in Sudan, South Sudan, Central African Republic, Chad, Cameroon, Angola, and Gabon.</p>
         <a href="about.html" class="btn btn-navy">
-          Learn More
+          <span data-i18n="about_intro.learnMoreBtn">Learn More</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>
       </div>
       <div class="reveal-right">
         <div class="img-with-badge img-block" style="aspect-ratio:4/3;">
           <img src="images/mining1.jpg" alt="Mining operations" style="width:100%;height:100%;object-fit:cover;">
-          <div class="img-badge">Est. 2025 — Kigali, Rwanda</div>
+          <div class="img-badge" data-i18n="about_intro.badge">Est. 2025 — Kigali, Rwanda</div>
         </div>
       </div>
     </div>
@@ -140,15 +147,15 @@
 <section class="section section-off">
   <div class="inner">
     <div class="reveal" style="margin-bottom:0;">
-      <div class="eyebrow">What We Do</div>
-      <h2 class="section-headline">Our Core Services</h2>
+      <div class="eyebrow" data-i18n="services_preview.eyebrow">What We Do</div>
+      <h2 class="section-headline" data-i18n="services_preview.headline">Our Core Services</h2>
     </div>
     <div class="service-cards mt-48 reveal">
       <div class="service-card">
         <img src="images/site1.jpg" alt="Mine Management">
         <div class="service-card-label">
-          <div class="eyebrow eyebrow-white">Operations</div>
-          <h3>Mine Management</h3>
+          <div class="eyebrow eyebrow-white" data-i18n="services_preview.service1_eyebrow">Operations</div>
+          <h3 data-i18n="services_preview.service1_title">Mine Management</h3>
           <div class="service-card-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </div>
@@ -157,8 +164,8 @@
       <div class="service-card">
         <img src="images/equipment.jpg" alt="Logistics">
         <div class="service-card-label">
-          <div class="eyebrow eyebrow-white">Logistics</div>
-          <h3>Heavy Equipment & Transport</h3>
+          <div class="eyebrow eyebrow-white" data-i18n="services_preview.service2_eyebrow">Logistics</div>
+          <h3 data-i18n="services_preview.service2_title">Heavy Equipment & Transport</h3>
           <div class="service-card-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </div>
@@ -167,8 +174,8 @@
       <div class="service-card">
         <img src="images/exploration.jpg" alt="Geological Exploration">
         <div class="service-card-label">
-          <div class="eyebrow eyebrow-white">Exploration</div>
-          <h3>Geological Survey & Mapping</h3>
+          <div class="eyebrow eyebrow-white" data-i18n="services_preview.service3_eyebrow">Exploration</div>
+          <h3 data-i18n="services_preview.service3_title">Geological Survey & Mapping</h3>
           <div class="service-card-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </div>
@@ -177,8 +184,8 @@
       <div class="service-card">
         <img src="images/minerals.jpg" alt="Field Services">
         <div class="service-card-label">
-          <div class="eyebrow eyebrow-white">Integrated Services</div>
-          <h3>Field Operations & Support</h3>
+          <div class="eyebrow eyebrow-white" data-i18n="services_preview.service4_eyebrow">Integrated Services</div>
+          <h3 data-i18n="services_preview.service4_title">Field Operations & Support</h3>
           <div class="service-card-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </div>
@@ -186,7 +193,7 @@
       </div>
     </div>
     <div style="margin-top:36px; text-align:center;">
-      <a href="services.html" class="btn btn-outline-navy">View All Services</a>
+      <a href="services.html" class="btn btn-outline-navy" data-i18n="services_preview.viewAllBtn">View All Services</a>
     </div>
   </div>
 </section>
@@ -195,37 +202,37 @@
 <section class="section section-dark">
   <div class="inner">
     <div class="reveal" style="margin-bottom:48px;">
-      <div class="eyebrow eyebrow-white">Why Gondwana</div>
-      <h2 class="section-headline white">Built on expertise.<br>Driven by results.</h2>
+      <div class="eyebrow eyebrow-white" data-i18n="values.eyebrow">Why Gondwana</div>
+      <h2 class="section-headline white" data-i18n="values.headline">Built on expertise.<br>Driven by results.</h2>
     </div>
     <div class="cards-4 reveal">
       <div class="pillar-card dark">
         <div class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Integrity</h3>
-        <p>Credibility and transparency in all our work and partnerships — on every site, every day.</p>
+        <h3 data-i18n="values.value1_title">Integrity</h3>
+        <p data-i18n="values.value1_desc">Credibility and transparency in all our work and partnerships — on every site, every day.</p>
       </div>
       <div class="pillar-card dark delay-1">
         <div class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <h3>Competence</h3>
-        <p>Technical and field expertise applied consistently across every operation we undertake.</p>
+        <h3 data-i18n="values.value2_title">Competence</h3>
+        <p data-i18n="values.value2_desc">Technical and field expertise applied consistently across every operation we undertake.</p>
       </div>
       <div class="pillar-card dark delay-2">
         <div class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <h3>Innovation</h3>
-        <p>Continuous improvement in technical methods and solutions for better outcomes.</p>
+        <h3 data-i18n="values.value3_title">Innovation</h3>
+        <p data-i18n="values.value3_desc">Continuous improvement in technical methods and solutions for better outcomes.</p>
       </div>
       <div class="pillar-card dark delay-3">
         <div class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Teamwork</h3>
-        <p>Partnership and collaboration at the core of every decision and field operation.</p>
+        <h3 data-i18n="values.value4_title">Teamwork</h3>
+        <p data-i18n="values.value4_desc">Partnership and collaboration at the core of every decision and field operation.</p>
       </div>
     </div>
   </div>
@@ -236,37 +243,37 @@
   <div class="inner">
     <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px;">
       <div>
-        <div class="eyebrow">Field Operations</div>
-        <h2 class="section-headline" style="margin-bottom:0;">Key Projects</h2>
+        <div class="eyebrow" data-i18n="projects_preview.eyebrow">Field Operations</div>
+        <h2 class="section-headline" style="margin-bottom:0;" data-i18n="projects_preview.headline">Key Projects</h2>
       </div>
-      <a href="projects.html" class="btn btn-outline-navy">View All Projects</a>
+      <a href="projects.html" class="btn btn-outline-navy" data-i18n="projects_preview.viewAllBtn">View All Projects</a>
     </div>
     <div class="cards-3 reveal">
       <div class="project-card">
         <div class="project-img"><img src="images/site1.jpg" alt="South Sudan Project"></div>
         <div class="project-body">
-          <span class="project-tag">South Sudan</span>
-          <h3>Waco Mining Transformation</h3>
-          <p>Transformed the Waco concession from artisanal methods to full mechanized operations, significantly increasing production and efficiency.</p>
-          <a href="projects.html" class="project-link">Read More <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+          <span class="project-tag" data-i18n="projects_preview.project1_tag">South Sudan</span>
+          <h3 data-i18n="projects_preview.project1_title">Waco Mining Transformation</h3>
+          <p data-i18n="projects_preview.project1_desc">Transformed the Waco concession from artisanal methods to full mechanized operations, significantly increasing production and efficiency.</p>
+          <a href="projects.html" class="project-link"><span data-i18n="projects_preview.readMoreBtn">Read More</span> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
         </div>
       </div>
       <div class="project-card delay-1">
         <div class="project-img"><img src="images/site2.jpg" alt="Great Sahara"></div>
         <div class="project-body">
-          <span class="project-tag">Great Sahara</span>
-          <h3>Mechanized Desert Mining</h3>
-          <p>Among the first to initiate mechanized mining in the Great Sahara — demonstrating exceptional logistics under extreme environmental conditions.</p>
-          <a href="projects.html" class="project-link">Read More <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+          <span class="project-tag" data-i18n="projects_preview.project2_tag">Great Sahara</span>
+          <h3 data-i18n="projects_preview.project2_title">Mechanized Desert Mining</h3>
+          <p data-i18n="projects_preview.project2_desc">Among the first to initiate mechanized mining in the Great Sahara — demonstrating exceptional logistics under extreme environmental conditions.</p>
+          <a href="projects.html" class="project-link"><span data-i18n="projects_preview.readMoreBtn">Read More</span> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
         </div>
       </div>
       <div class="project-card delay-2">
         <div class="project-img"><img src="images/field.jpg" alt="Square Waco"></div>
         <div class="project-body">
-          <span class="project-tag">Dubai Partnership</span>
-          <h3>Square Waco Gold Site</h3>
-          <p>First successful production results obtained from Square Waco, developed in collaboration with international partners combining local and global expertise.</p>
-          <a href="projects.html" class="project-link">Read More <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+          <span class="project-tag" data-i18n="projects_preview.project3_tag">Dubai Partnership</span>
+          <h3 data-i18n="projects_preview.project3_title">Square Waco Gold Site</h3>
+          <p data-i18n="projects_preview.project3_desc">First successful production results obtained from Square Waco, developed in collaboration with international partners combining local and global expertise.</p>
+          <a href="projects.html" class="project-link"><span data-i18n="projects_preview.readMoreBtn">Read More</span> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
         </div>
       </div>
     </div>
@@ -279,10 +286,10 @@
   <div class="cta-overlay"></div>
   <div class="cta-content">
     <div>
-      <h2>Ready to Partner<br>With Gondwana?</h2>
-      <p>Whether you need mine management, geological exploration, or integrated field services — we are ready to mobilise.</p>
+      <h2 data-i18n="cta.headline">Ready to Partner<br>With Gondwana?</h2>
+      <p data-i18n="cta.subheadline">Whether you need mine management, geological exploration, or integrated field services — we are ready to mobilise.</p>
     </div>
-    <a href="contact.html" class="btn btn-gold">
+    <a href="contact.html" class="btn btn-gold" data-i18n="cta.ctaBtn">
       Contact Our Team
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
     </a>
@@ -296,18 +303,18 @@
       <div class="footer-contact-strip">
         <div class="footer-contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.1 6.1l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+250796880040">+250 796 880 040</a>
+          <a href="tel:+250796880040"><span data-i18n="footer.phone">+250 796 880 040</span></a>
         </div>
         <div class="footer-contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@gondwanamining.com">info@gondwanamining.com</a>
+          <a href="mailto:info@gondwanamining.com"><span data-i18n="footer.email">info@gondwanamining.com</span></a>
         </div>
         <div class="footer-contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Kigali, Rwanda</span>
+          <span data-i18n="footer.location">Kigali, Rwanda</span>
         </div>
       </div>
-      <span style="font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;">Reg. No: 149523880</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;" data-i18n="footer.regNo">Reg. No: 149523880</span>
     </div>
     <div class="footer-grid">
       <div>
@@ -318,50 +325,43 @@
             <div style="font-size:.54rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;">Mining Management &amp; Services</div>
           </div>
         </div>
-        <p>Africa's emerging leader in mining management and integrated field services. Headquartered in Kigali, Rwanda — operating across 8+ African nations.</p>
+        <p data-i18n="footer.tagline">Africa's emerging leader in mining management and integrated field services. Headquartered in Kigali, Rwanda — operating across 8+ African nations.</p>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4 data-i18n="footer.company_heading">Company</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="network.html">Network</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" data-i18n="footer.company_about">About Us</a></li>
+          <li><a href="team.html" data-i18n="footer.company_team">Our Team</a></li>
+          <li><a href="network.html" data-i18n="footer.company_network">Network</a></li>
+          <li><a href="contact.html" data-i18n="footer.company_contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 data-i18n="footer.services_heading">Services</h4>
         <ul>
-          <li><a href="services.html">Mine Management</a></li>
-          <li><a href="services.html">Logistics</a></li>
-          <li><a href="services.html">Geological Exploration</a></li>
-          <li><a href="services.html">Field Operations</a></li>
+          <li><a href="services.html" data-i18n="footer.services_mine">Mine Management</a></li>
+          <li><a href="services.html" data-i18n="footer.services_logistics">Logistics</a></li>
+          <li><a href="services.html" data-i18n="footer.services_exploration">Geological Exploration</a></li>
+          <li><a href="services.html" data-i18n="footer.services_field">Field Operations</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Operations</h4>
+        <h4 data-i18n="footer.operations_heading">Operations</h4>
         <ul>
-          <li><a href="projects.html">Projects</a></li>
-          <li><span>Sudan &amp; South Sudan</span></li>
-          <li><span>Central Africa</span></li>
-          <li><span>Dubai Branch</span></li>
+          <li><a href="projects.html" data-i18n="footer.operations_projects">Projects</a></li>
+          <li><span data-i18n="footer.operations_sudan">Sudan &amp; South Sudan</span></li>
+          <li><span data-i18n="footer.operations_central">Central Africa</span></li>
+          <li><span data-i18n="footer.operations_dubai">Dubai Branch</span></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Gondwana Mining Management &amp; Services Ltd. All rights reserved.</span>
-      <span>Kigali &middot; Dubai</span>
+      <span data-i18n="footer.copyright">&copy; 2026 Gondwana Mining Management &amp; Services Ltd. All rights reserved.</span>
+      <span data-i18n="footer.locations">Kigali &middot; Dubai</span>
     </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-function toggleLang() {
-  const isRtl = document.body.classList.toggle('rtl');
-  document.documentElement.lang = isRtl ? 'ar' : 'en';
-  document.querySelector('.lang-toggle span').textContent = isRtl ? 'EN' : 'AR';
-}
-</script>
 </body>
 </html>

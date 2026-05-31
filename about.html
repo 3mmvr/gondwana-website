@@ -17,19 +17,19 @@
     <div class="tb-left">
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.1 6.1l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <a href="tel:+250796880040">+250 796 880 040</a>
+        <a href="tel:+250796880040"><span data-i18n="topbar.phone">+250 796 880 040</span></a>
       </span>
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@gondwanamining.com">info@gondwanamining.com</a>
+        <a href="mailto:info@gondwanamining.com"><span data-i18n="topbar.email">info@gondwanamining.com</span></a>
       </span>
       <span class="tb-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Kigali, Rwanda
+        <span data-i18n="topbar.location">Kigali, Rwanda</span>
       </span>
     </div>
     <div class="tb-right">
-      <button class="lang-toggle" onclick="toggleLang()">
+      <button class="lang-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span>AR</span>
       </button>
@@ -46,13 +46,13 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="team.html" class="nav-link">Team</a>
-      <a href="network.html" class="nav-link">Network</a>
-      <a href="contact.html" class="nav-link nav-cta">Contact Us</a>
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+      <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+      <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
+      <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
+      <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
     </div>
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -62,13 +62,20 @@
   <!-- MOBILE NAV -->
   <div class="mobile-nav">
     <button class="mobile-close" aria-label="Close">&times;</button>
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="team.html" class="nav-link">Team</a>
-    <a href="network.html" class="nav-link">Network</a>
-    <a href="contact.html" class="nav-link nav-cta">Contact Us</a>
+  <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+  <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+  <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+  <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+  <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
+  <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
+  <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
+    
+    <!-- Language Toggle for Mobile -->
+    <div class="mobile-lang-divider"></div>
+    <button class="mobile-lang-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>Switch to Arabic</span>
+    </button>
   </div>
 
 <!-- PAGE HEADER -->
@@ -76,9 +83,9 @@
   <div class="page-header-bg" style="background-image:url('images/mining1.jpg')"></div>
   <div class="page-header-overlay"></div>
   <div class="page-header-content">
-    <div class="eyebrow eyebrow-white">Our Story</div>
-    <h1>About Gondwana</h1>
-    <p>An emerging pioneer in Africa's mining sector — built on expertise, transparency, and field-proven results.</p>
+    <div class="eyebrow eyebrow-white" data-i18n="about_intro.eyebrow">Our Story</div>
+    <h1 data-i18n="about_intro.headline">About Gondwana</h1>
+    <p data-i18n="about_intro.paragraph1">An emerging pioneer in Africa's mining sector — built on expertise, transparency, and field-proven results.</p>
   </div>
 </div>
 <hr class="gold-rule">
@@ -88,16 +95,16 @@
   <div class="inner">
     <div class="two-col">
       <div class="reveal-left">
-        <div class="eyebrow">Who We Are</div>
-        <h2 class="section-headline">Africa's Mining Management Platform</h2>
-        <p class="section-sub" style="margin-bottom:18px;">Gondwana Mining Management &amp; Services Ltd is one of the emerging and pioneering companies in the field of mining operations management and integrated logistical and technical services in Africa.</p>
-        <p class="section-sub" style="margin-bottom:18px;">Established in Kigali, Rwanda in 2025, the company serves as an administrative and organizational hub for mining projects across the continent — particularly in Sudan, South Sudan, Central African Republic, Chad, Cameroon, Angola, Gabon, and beyond.</p>
-        <p class="section-sub">The company relies on a team of highly qualified geologists, engineers, and technicians, striving to deliver professional field solutions that ensure maximum efficiency and productivity for every project partner.</p>
+        <div class="eyebrow" data-i18n="about.who_eyebrow">Who We Are</div>
+        <h2 class="section-headline" data-i18n="about.who_headline">Africa's Mining Management Platform</h2>
+        <p class="section-sub" style="margin-bottom:18px;" data-i18n="about.who_p1">Gondwana Mining Management &amp; Services Ltd is one of the emerging and pioneering companies in the field of mining operations management and integrated logistical and technical services in Africa.</p>
+        <p class="section-sub" style="margin-bottom:18px;" data-i18n="about.who_p2">Established in Kigali, Rwanda in 2025, the company serves as an administrative and organizational hub for mining projects across the continent — particularly in Sudan, South Sudan, Central African Republic, Chad, Cameroon, Angola, Gabon, and beyond.</p>
+        <p class="section-sub" data-i18n="about.who_p3">The company relies on a team of highly qualified geologists, engineers, and technicians, striving to deliver professional field solutions that ensure maximum efficiency and productivity for every project partner.</p>
       </div>
       <div class="reveal-right">
         <div class="img-with-badge img-block" style="aspect-ratio:4/3;">
           <img src="images/africa.jpg" alt="Africa operations" style="width:100%;height:100%;object-fit:cover;">
-          <div class="img-badge">Est. 2025 — Kigali, Rwanda</div>
+          <div class="img-badge" data-i18n="about_intro.badge">Est. 2025 — Kigali, Rwanda</div>
         </div>
       </div>
     </div>
@@ -108,25 +115,25 @@
 <section class="section section-off">
   <div class="inner">
     <div class="reveal" style="text-align:center;margin-bottom:48px;">
-      <div class="eyebrow" style="justify-content:center;">Direction</div>
-      <h2 class="section-headline" style="margin:0 auto;">Vision &amp; Mission</h2>
+      <div class="eyebrow" style="justify-content:center;" data-i18n="about.direction_eyebrow">Direction</div>
+      <h2 class="section-headline" style="margin:0 auto;" data-i18n="about.direction_headline">Vision &amp; Mission</h2>
     </div>
     <div class="cards-2 reveal">
       <div style="background:var(--navy);padding:44px;border-radius:2px;">
         <div style="display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.15em;margin-bottom:14px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
-          Our Vision
+          <span data-i18n="about.vision_label">Our Vision</span>
         </div>
-        <h2 style="color:var(--white);font-size:1.5rem;margin-bottom:18px;text-transform:uppercase;">Leading Africa's Mining Future</h2>
-        <p style="color:rgba(255,255,255,.72);line-height:1.8;font-size:.97rem;">To be Africa's leading platform in managing and operating mining projects — combining technical expertise and administrative professionalism to achieve sustainable and high-quality production.</p>
+        <h2 style="color:var(--white);font-size:1.5rem;margin-bottom:18px;text-transform:uppercase;" data-i18n="about.vision_title">Leading Africa's Mining Future</h2>
+        <p style="color:rgba(255,255,255,.72);line-height:1.8;font-size:.97rem;" data-i18n="about.vision_desc">To be Africa's leading platform in managing and operating mining projects — combining technical expertise and administrative professionalism to achieve sustainable and high-quality production.</p>
       </div>
       <div style="background:var(--off-white);padding:44px;border-radius:2px;border:1px solid var(--border);">
         <div style="display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.15em;margin-bottom:14px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          Our Mission
+          <span data-i18n="about.mission_label">Our Mission</span>
         </div>
-        <h2 style="font-size:1.5rem;margin-bottom:18px;text-transform:uppercase;">Integrated Excellence</h2>
-        <p style="color:var(--text-mid);line-height:1.8;font-size:.97rem;">To provide integrated field and logistical services in the mining sector through specialized teams dedicated to achieving efficiency, transparency, and operational safety — serving local and international partners across Africa.</p>
+        <h2 style="font-size:1.5rem;margin-bottom:18px;text-transform:uppercase;" data-i18n="about.mission_title">Integrated Excellence</h2>
+        <p style="color:var(--text-mid);line-height:1.8;font-size:.97rem;" data-i18n="about.mission_desc">To provide integrated field and logistical services in the mining sector through specialized teams dedicated to achieving efficiency, transparency, and operational safety — serving local and international partners across Africa.</p>
       </div>
     </div>
   </div>
@@ -136,34 +143,34 @@
 <section class="section section-dark">
   <div class="inner">
     <div class="reveal" style="margin-bottom:48px;">
-      <div class="eyebrow eyebrow-white">Core Values</div>
-      <h2 class="section-headline white">What we stand for</h2>
+      <div class="eyebrow eyebrow-white" data-i18n="about.values_eyebrow">Core Values</div>
+      <h2 class="section-headline white" data-i18n="about.values_headline">What we stand for</h2>
     </div>
     <div class="cards-5 reveal">
       <div class="pillar-card dark">
         <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Integrity</h3>
-        <p>Credibility and honesty in all our work and partnerships.</p>
+        <h3 data-i18n="about.value1_title">Integrity</h3>
+        <p data-i18n="about.value1_desc">Credibility and honesty in all our work and partnerships.</p>
       </div>
       <div class="pillar-card dark delay-1">
         <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <h3>Competence</h3>
-        <p>Technical and field excellence across every operation.</p>
+        <h3 data-i18n="about.value2_title">Competence</h3>
+        <p data-i18n="about.value2_desc">Technical and field excellence across every operation.</p>
       </div>
       <div class="pillar-card dark delay-2">
         <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Innovation</h3>
-        <p>Continuous improvement in methods and technical solutions.</p>
+        <h3 data-i18n="about.value3_title">Innovation</h3>
+        <p data-i18n="about.value3_desc">Continuous improvement in methods and technical solutions.</p>
       </div>
       <div class="pillar-card dark delay-3">
         <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Teamwork</h3>
-        <p>Partnership and collaboration at the core of everything we do.</p>
+        <h3 data-i18n="about.value4_title">Teamwork</h3>
+        <p data-i18n="about.value4_desc">Partnership and collaboration at the core of everything we do.</p>
       </div>
       <div class="pillar-card dark delay-4">
         <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>Sustainability</h3>
-        <p>Environmental respect and responsible production practices.</p>
+        <h3 data-i18n="about.value5_title">Sustainability</h3>
+        <p data-i18n="about.value5_desc">Environmental respect and responsible production practices.</p>
       </div>
     </div>
   </div>
@@ -174,29 +181,29 @@
   <div class="inner">
     <div class="two-col-wide">
       <div class="reveal-left">
-        <div class="eyebrow">How We Work</div>
-        <h2 class="section-headline">Our Operational Approach</h2>
-        <p class="section-sub" style="margin-bottom:36px;">We demonstrate capability through tangible field results — not media campaigns. Partners are attracted by proven performance, not promises.</p>
+        <div class="eyebrow" data-i18n="about.approach_eyebrow">How We Work</div>
+        <h2 class="section-headline" data-i18n="about.approach_headline">Our Operational Approach</h2>
+        <p class="section-sub" style="margin-bottom:36px;" data-i18n="about.approach_intro">We demonstrate capability through tangible field results — not media campaigns. Partners are attracted by proven performance, not promises.</p>
         <div class="achievements" style="margin-top:0;">
           <div class="achievement-item">
             <div class="achievement-num">01</div>
-            <h4>Rwanda as Our Hub</h4>
-            <p>Founded in Kigali with official authorization to open seven branches across African production countries.</p>
+            <h4 data-i18n="about.approach1_title">Rwanda as Our Hub</h4>
+            <p data-i18n="about.approach1_desc">Founded in Kigali with official authorization to open seven branches across African production countries.</p>
           </div>
           <div class="achievement-item">
             <div class="achievement-num">02</div>
-            <h4>Proven Field Experience</h4>
-            <p>Our team brings vast experience from years of exploration and fieldwork across challenging African terrains.</p>
+            <h4 data-i18n="about.approach2_title">Proven Field Experience</h4>
+            <p data-i18n="about.approach2_desc">Our team brings vast experience from years of exploration and fieldwork across challenging African terrains.</p>
           </div>
           <div class="achievement-item">
             <div class="achievement-num">03</div>
-            <h4>Results Over Publicity</h4>
-            <p>We prove capability through tangible field results — partners come through performance, not campaigns.</p>
+            <h4 data-i18n="about.approach3_title">Results Over Publicity</h4>
+            <p data-i18n="about.approach3_desc">We prove capability through tangible field results — partners come through performance, not campaigns.</p>
           </div>
           <div class="achievement-item">
             <div class="achievement-num">04</div>
-            <h4>Strategic Partnerships</h4>
-            <p>We welcome partnerships built on transparency, discipline, and a shared commitment to hard fieldwork.</p>
+            <h4 data-i18n="about.approach4_title">Strategic Partnerships</h4>
+            <p data-i18n="about.approach4_desc">We welcome partnerships built on transparency, discipline, and a shared commitment to hard fieldwork.</p>
           </div>
         </div>
       </div>
@@ -215,10 +222,10 @@
   <div class="cta-overlay"></div>
   <div class="cta-content">
     <div>
-      <h2>Ready to Work<br>With Our Team?</h2>
-      <p>Get in touch and let's discuss how Gondwana can support your next mining project across Africa.</p>
+      <h2 data-i18n="cta.headline">Ready to Work<br>With Our Team?</h2>
+      <p data-i18n="cta.subheadline">Get in touch and let's discuss how Gondwana can support your next mining project across Africa.</p>
     </div>
-    <a href="contact.html" class="btn btn-gold">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="contact.html" class="btn btn-gold" data-i18n="cta.ctaBtn">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
   </div>
 </div>
 
@@ -227,11 +234,11 @@
   <div class="inner">
     <div class="footer-top">
       <div class="footer-contact-strip">
-        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.1 6.1l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+250796880040">+250 796 880 040</a></div>
-        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@gondwanamining.com">info@gondwanamining.com</a></div>
-        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kigali, Rwanda</span></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.1 6.1l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+250796880040"><span data-i18n="footer.phone">+250 796 880 040</span></a></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@gondwanamining.com"><span data-i18n="footer.email">info@gondwanamining.com</span></a></div>
+        <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="footer.location">Kigali, Rwanda</span></div>
       </div>
-      <span style="font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;">Reg. No: 149523880</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;" data-i18n="footer.regNo">Reg. No: 149523880</span>
     </div>
     <div class="footer-grid">
       <div>
@@ -239,19 +246,18 @@
           <img src="images/logo.png" alt="Gondwana" class="footer-logo-img">
           <div><div class="footer-brand-name">Gondwana</div><div style="font-size:.54rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;">Mining Management &amp; Services</div></div>
         </div>
-        <p>Africa's emerging leader in mining management and integrated field services. Headquartered in Kigali, Rwanda — operating across 8+ African nations.</p>
+        <p data-i18n="footer.tagline">Africa's emerging leader in mining management and integrated field services. Headquartered in Kigali, Rwanda — operating across 8+ African nations.</p>
       </div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="network.html">Network</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Mine Management</a></li><li><a href="services.html">Logistics</a></li><li><a href="services.html">Geological Exploration</a></li><li><a href="services.html">Field Operations</a></li></ul></div>
-      <div class="footer-col"><h4>Operations</h4><ul><li><a href="projects.html">Projects</a></li><li><span>Sudan &amp; South Sudan</span></li><li><span>Central Africa</span></li><li><span>Dubai Branch</span></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.company_heading">Company</h4><ul><li><a href="about.html" data-i18n="footer.company_about">About Us</a></li><li><a href="team.html" data-i18n="footer.company_team">Our Team</a></li><li><a href="network.html" data-i18n="footer.company_network">Network</a></li><li><a href="contact.html" data-i18n="footer.company_contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.services_heading">Services</h4><ul><li><a href="services.html" data-i18n="footer.services_mine">Mine Management</a></li><li><a href="services.html" data-i18n="footer.services_logistics">Logistics</a></li><li><a href="services.html" data-i18n="footer.services_exploration">Geological Exploration</a></li><li><a href="services.html" data-i18n="footer.services_field">Field Operations</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.operations_heading">Operations</h4><ul><li><a href="projects.html" data-i18n="footer.operations_projects">Projects</a></li><li><span data-i18n="footer.operations_sudan">Sudan &amp; South Sudan</span></li><li><span data-i18n="footer.operations_central">Central Africa</span></li><li><span data-i18n="footer.operations_dubai">Dubai Branch</span></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Gondwana Mining Management &amp; Services Ltd. All rights reserved.</span>
-      <span>Kigali &middot; Dubai</span>
+      <span data-i18n="footer.copyright">&copy; 2026 Gondwana Mining Management &amp; Services Ltd. All rights reserved.</span>
+      <span data-i18n="footer.locations">Kigali &middot; Dubai</span>
     </div>
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script>function toggleLang(){const isRtl=document.body.classList.toggle('rtl');document.documentElement.lang=isRtl?'ar':'en';document.querySelector('.lang-toggle span').textContent=isRtl?'EN':'AR';}</script>
 </body>
 </html>
