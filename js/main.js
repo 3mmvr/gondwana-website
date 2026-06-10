@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   /* ── SCROLL REVEAL ──────────────────────────────────────── */
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .how-phase');
   if (revealEls.length > 0) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {

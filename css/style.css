@@ -2,7 +2,8 @@
 
 :root {
   --navy:#1a2b5e; --navy-dark:#0d1733; --navy-mid:#1e3170;
-  --gold:#d4a828; --gold-light:#f0c84a; --gold-dim:#b8901e;
+  /* Brand gold updated to match design brief (C9A84C) and sensible variants */
+  --gold:#C9A84C; --gold-light:#E8C978; --gold-dim:#9A7934;
   --white:#ffffff; --off-white:#f5f4f0; --light-gray:#ebebeb;
   --text:#111118; --text-mid:#3a3a4a; --text-light:#6a6a7e;
   --border:#dddbd4;
@@ -390,3 +391,450 @@ body.rtl .highlight-block{border-left:none;border-right:4px solid var(--gold);}
   color:#ffffffb3;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   HOW WE WORK PAGE — Timeline, Departments, Pilot Callout, CTA
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* FOUR-PHASE TIMELINE ─────────────────────────────────────────────────── */
+.how-timeline{
+  display:grid;
+  gap:48px;
+  max-width:900px;
+  margin:0 auto;
+  position:relative;
+}
+
+.how-timeline::before{
+  content:'';
+  position:absolute;
+  left:30px;
+  top:60px;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg,var(--gold) 0%,var(--gold) 100%);
+  opacity:.4;
+}
+
+body.rtl .how-timeline::before{
+  left:auto;
+  right:30px;
+}
+
+.how-phase{
+  display:grid;
+  grid-template-columns:60px 1fr;
+  gap:30px;
+  align-items:flex-start;
+  position:relative;
+  animation:slideInPhase .7s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+.how-phase:nth-child(1){animation-delay:0s;}
+.how-phase:nth-child(2){animation-delay:.1s;}
+.how-phase:nth-child(3){animation-delay:.2s;}
+.how-phase:nth-child(4){animation-delay:.3s;}
+
+.how-phase-marker{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--navy-dark);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  position:relative;
+  z-index:2;
+  box-shadow:0 4px 16px rgba(212,168,40,.2);
+  transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s cubic-bezier(.25,.46,.45,.94);
+}
+
+.how-phase:hover .how-phase-marker{
+  transform:scale(1.08);
+  box-shadow:0 6px 24px rgba(212,168,40,.35);
+}
+
+.how-phase-body h3{
+  color:var(--navy);
+  margin-bottom:12px;
+  font-size:1.2rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+
+.how-phase-body>p{
+  color:var(--text-mid);
+  margin-bottom:18px;
+  line-height:1.75;
+  font-size:.95rem;
+}
+
+.how-phase-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:12px;
+}
+
+.how-phase-list li{
+  color:var(--text-mid);
+  font-size:.9rem;
+  padding-left:24px;
+  position:relative;
+  line-height:1.6;
+}
+
+.how-phase-list li::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:7px;
+  width:6px;
+  height:6px;
+  background:var(--gold);
+  border-radius:50%;
+}
+
+body.rtl .how-phase-list li{
+  padding-left:0;
+  padding-right:24px;
+}
+
+body.rtl .how-phase-list li::before{
+  left:auto;
+  right:0;
+}
+
+body.rtl .how-timeline::before{
+  left:auto;
+  right:30px;
+}
+
+body.rtl .how-phase{
+  grid-template-columns:60px 1fr;
+  gap:30px;
+  direction:rtl;
+}
+
+body.rtl .how-phase-marker{
+  grid-column:1;
+  grid-row:1;
+}
+
+body.rtl .how-phase-body{
+  grid-column:2;
+  grid-row:1;
+  direction:rtl;
+}
+
+@keyframes slideInPhase{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* OPERATIONS MANAGEMENT: SEVEN DEPARTMENTS ──────────────────────────── */
+.how-dept-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:20px;
+  margin-bottom:48px;
+}
+
+.how-dept-card{
+  text-align:center;
+  padding:28px 18px;
+  border:1px solid rgba(212,168,40,.25);
+  border-radius:6px;
+  background:rgba(255,255,255,.03);
+  transition:all .3s cubic-bezier(.25,.46,.45,.94);
+  animation:fadeInDeptCard .5s ease-out both;
+}
+
+.how-dept-card:nth-child(1){animation-delay:0s;}
+.how-dept-card:nth-child(2){animation-delay:.05s;}
+.how-dept-card:nth-child(3){animation-delay:.1s;}
+.how-dept-card:nth-child(4){animation-delay:.15s;}
+.how-dept-card:nth-child(5){animation-delay:.2s;}
+.how-dept-card:nth-child(6){animation-delay:.25s;}
+.how-dept-card:nth-child(7){animation-delay:.3s;}
+
+.how-dept-card:hover{
+  border-color:var(--gold);
+  background:rgba(212,168,40,.12);
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(212,168,40,.15);
+}
+
+.how-dept-card svg{
+  width:32px;
+  height:32px;
+  color:var(--gold);
+  margin-bottom:14px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  transition:transform .3s cubic-bezier(.25,.46,.45,.94);
+}
+
+.how-dept-card:hover svg{
+  transform:scale(1.15) rotate(-8deg);
+}
+
+.how-dept-card h4{
+  color:rgba(255,255,255,.95);
+  font-size:.85rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-bottom:8px;
+  line-height:1.3;
+}
+
+.how-dept-card p{
+  color:rgba(255,255,255,.65);
+  font-size:.78rem;
+  line-height:1.55;
+  margin:0;
+}
+
+@keyframes fadeInDeptCard{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* PILOT PHASE CALLOUT ───────────────────────────────────────────────── */
+.how-pilot{
+  display:grid;
+  grid-template-columns:1fr;
+  background:rgba(212,168,40,.1);
+  border-left:4px solid var(--gold);
+  padding:32px;
+  border-radius:4px;
+  margin-bottom:48px;
+  animation:slideInPhase .7s cubic-bezier(.25,.46,.45,.94) .4s both;
+  text-align:left;
+}
+
+body.rtl .how-pilot{
+  border-left:none;
+  border-right:4px solid var(--gold);
+  text-align:right;
+}
+
+.how-pilot svg{
+  flex-shrink:0;
+  color:var(--gold);
+  width:24px;
+  height:24px;
+  margin-bottom:16px;
+  margin-left:0;
+}
+
+body.rtl .how-pilot svg{
+  margin-left:auto;
+  margin-right:0;
+  display:block;
+}
+
+.how-pilot h4{
+  color:rgba(255,255,255,.95);
+  font-size:1rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:8px;
+}
+
+.how-pilot p{
+  color:rgba(255,255,255,.75);
+  font-size:.9rem;
+  line-height:1.7;
+  margin:0;
+}
+
+/* RTL SUPPORT ───────────────────────────────────────────────────────── */
+body.rtl .how-timeline::before{
+  left:auto;
+  right:30px;
+}
+
+/* RESPONSIVE: TABLET ────────────────────────────────────────────────── */
+@media(max-width:1100px){
+  .how-dept-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  
+  .how-phase{
+    gap:24px;
+  }
+}
+
+/* RESPONSIVE: MOBILE LANDSCAPE ──────────────────────────────────────── */
+@media(max-width:768px){
+  .how-timeline{
+    gap:40px;
+  }
+  
+  .how-timeline::before{
+    left:22px;
+  }
+  
+  body.rtl .how-timeline::before{
+    right:22px;
+  }
+  
+  .how-phase{
+    grid-template-columns:44px 1fr;
+    gap:18px;
+  }
+  
+  .how-phase-marker{
+    width:44px;
+    height:44px;
+    font-size:16px;
+    min-width:44px;
+  }
+  
+  .how-phase-body h3{
+    font-size:1rem;
+  }
+  
+  .how-phase-body>p{
+    font-size:.9rem;
+  }
+  
+  .how-dept-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  
+  .how-pilot{
+    padding:24px;
+    gap:16px;
+  }
+  
+  .how-pilot h4,
+  .how-pilot p{
+    text-align:left;
+  }
+  
+  body.rtl .how-pilot h4,
+  body.rtl .how-pilot p{
+    text-align:right;
+  }
+}
+
+/* RESPONSIVE: MOBILE PORTRAIT ───────────────────────────────────────── */
+@media(max-width:480px){
+  .how-timeline{
+    gap:32px;
+  }
+  
+  .how-timeline::before{
+    left:18px;
+  }
+  
+  body.rtl .how-timeline::before{
+    right:18px;
+  }
+  
+  .how-phase{
+    grid-template-columns:36px 1fr;
+    gap:14px;
+  }
+  
+  .how-phase-marker{
+    width:36px;
+    height:36px;
+    font-size:14px;
+    min-width:36px;
+  }
+  
+  .how-phase-body h3{
+    font-size:.95rem;
+  }
+  
+  .how-phase-body>p{
+    font-size:.85rem;
+    margin-bottom:12px;
+  }
+  
+  .how-phase-list{
+    gap:10px;
+  }
+  
+  .how-phase-list li{
+    font-size:.82rem;
+    padding-left:20px;
+  }
+  
+  body.rtl .how-phase-list li{
+    padding-left:0;
+    padding-right:20px;
+  }
+  
+  .how-dept-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  
+  .how-dept-card{
+    padding:20px 14px;
+  }
+  
+  .how-dept-card h4{
+    font-size:.78rem;
+    margin-bottom:6px;
+  }
+  
+  .how-dept-card p{
+    font-size:.72rem;
+  }
+  
+  .how-pilot{
+    padding:18px 14px;
+    gap:12px;
+    flex-direction:column;
+  }
+  
+  .how-pilot svg{
+    margin-top:0;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .how-pilot h4,
+  .how-pilot p{
+    text-align:left;
+  }
+  
+  body.rtl .how-pilot{
+    flex-direction:column;
+  }
+  
+  body.rtl .how-pilot h4,
+  body.rtl .how-pilot p{
+    text-align:right;
+  }
+  
+  .page-header h1{
+    font-size:1.8rem;
+  }
+  
+  .cta-content{
+    flex-direction:column;
+    gap:20px;
+  }
+  
+  .cta-content .btn{
+    width:100%;
+    justify-content:center;
+  }
+}
