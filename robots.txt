@@ -1,0 +1,22 @@
+# Gondwana Mining - Robot Configuration
+# Allow all crawlers to index the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay recommendations (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://gondwanamining.com/sitemap.xml

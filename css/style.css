@@ -1003,9 +1003,6 @@ body.rtl .vision-quote-close{
 }
 
 /* COMMUNITY PAGE SPECIFIC STYLES */
-.section-dark .cards-2 .pillar-card {
-  border-radius: 15px;
-}
 
 @media (max-width:960px){
   .pillars-grid{
