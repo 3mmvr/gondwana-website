@@ -35,28 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.id = 'cookie-consent-popup';
     popup.innerHTML = `
       <div class="cookie-consent-container">
+        <div class="cookie-consent-header">
+          <div class="cookie-consent-tabs">
+            <button class="cookie-tab active" data-tab="consent">Consent</button>
+            <button class="cookie-tab" data-tab="details">Details</button>
+            <button class="cookie-tab" data-tab="about">About</button>
+          </div>
+        </div>
+        
         <div class="cookie-consent-content">
-          <div class="cookie-consent-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-              <!-- Cookie with bite -->
-              <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.9"/>
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
-              <!-- Bite mark -->
-              <path d="M 20 8 Q 18 6 16 8 Q 18 10 20 8" fill="white" opacity="0.7"/>
-              <!-- Chocolate chips -->
-              <circle cx="9" cy="9" r="1.2" fill="white" opacity="0.8"/>
-              <circle cx="14" cy="10" r="1" fill="white" opacity="0.8"/>
-              <circle cx="11" cy="15" r="1.2" fill="white" opacity="0.8"/>
-              <circle cx="15" cy="14" r="0.9" fill="white" opacity="0.8"/>
-            </svg>
+          <div class="cookie-tab-content active" id="consent-tab">
+            <h3>This website uses cookies</h3>
+            <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services.</p>
+            
+            <div class="cookie-consent-actions">
+              <button id="cookie-reject" class="cookie-btn cookie-btn-outline">Deny all cookies</button>
+              <button id="cookie-accept" class="cookie-btn cookie-btn-primary">Allow all cookies</button>
+            </div>
           </div>
-          <div class="cookie-consent-text">
-            <h3>Privacy & Cookies</h3>
-            <p>We use cookies to enhance your experience and analyze our site traffic. By clicking "Accept," you consent to our use of cookies.</p>
+          
+          <div class="cookie-tab-content" id="details-tab">
+            <h3>Cookie Details</h3>
+            <p>We use different types of cookies for different purposes. Essential cookies are necessary for the website to function, while analytical cookies help us understand how visitors use the site.</p>
           </div>
-          <div class="cookie-consent-actions">
-            <button id="cookie-reject" class="cookie-btn cookie-btn-outline">Reject</button>
-            <button id="cookie-accept" class="cookie-btn cookie-btn-primary">Accept All</button>
+          
+          <div class="cookie-tab-content" id="about-tab">
+            <h3>About Cookies</h3>
+            <p>Cookies are small text files stored on your device that help websites remember your preferences and improve your browsing experience. You can control cookie settings through your browser.</p>
           </div>
         </div>
       </div>
@@ -66,6 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger animation
     requestAnimationFrame(() => {
       popup.classList.add('show');
+    });
+
+    // Tab switching functionality
+    const tabs = popup.querySelectorAll('.cookie-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabName = tab.dataset.tab;
+        
+        // Remove active class from all tabs and contents
+        popup.querySelectorAll('.cookie-tab').forEach(t => t.classList.remove('active'));
+        popup.querySelectorAll('.cookie-tab-content').forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        tab.classList.add('active');
+        const content = popup.querySelector(`#${tabName}-tab`);
+        if (content) content.classList.add('active');
+      });
     });
 
     // Accept button
