@@ -16,7 +16,8 @@ html{scroll-behavior:smooth;font-size:16px;}
 body{font-family:'Barlow',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.65;-webkit-font-smoothing:antialiased;}
 body.rtl{font-family:'Noto Kufi Arabic','Barlow',sans-serif;direction:rtl;}
 h1,h2,h3,h4,h5{font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--text);line-height:1.05;letter-spacing:.01em;}
-body.rtl h1,body.rtl h2,body.rtl h3,body.rtl h4{font-family:'Noto Kufi Arabic',sans-serif;letter-spacing:0;}
+body.rtl h1,body.rtl h2,body.rtl h3,body.rtl h4{font-family:'Noto Kufi Arabic',sans-serif;letter-spacing:0;line-height:1.3;}
+body.rtl .hero h1{font-size:clamp(1.8rem,3vw,2.8rem);}
 img{display:block;max-width:100%;height:auto;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
@@ -308,8 +309,9 @@ body.rtl .highlight-block{border-left:none;border-right:4px solid var(--gold);}
   .hamburger{display:flex;}
   .section{padding:64px 24px;}
   .section-sm{padding:48px 24px;}
-  .hero-content{padding:24px 24px 56px;}
+  .hero-content{padding:32px 24px 56px;}
   .hero h1{font-size:2.5rem;}
+  .hero-sub{font-size:1rem;}
   .hero-stats{gap:32px;}
   .two-col,.two-col-wide{grid-template-columns:1fr;gap:36px;}
   .service-cards{grid-template-columns:1fr;}
@@ -867,5 +869,199 @@ body.rtl .how-timeline::before{
   .cta-content .btn{
     width:100%;
     justify-content:center;
+  }
+}
+
+/* PILLARS GRID - COMMUNITY PAGE */
+.pillars-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+
+.pillar-item{
+  background:rgba(255,255,255,.04);
+  padding:24px;
+  text-align:left;
+  transition:all .3s cubic-bezier(.25,.46,.45,.94);
+  border:1px solid rgba(201,168,76,.1);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+  border-radius:15px;
+  min-height:100%;
+}
+
+.pillar-item:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(201,168,76,.3);
+  transform:translateY(-4px);
+}
+
+.pillar-emoji{
+  font-size:2.4rem;
+  line-height:1;
+  display:inline-block;
+  flex-shrink:0;
+}
+
+.pillar-item h4{
+  font-size:1rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--gold);
+  margin:0;
+  width:100%;
+}
+
+.pillar-item p{
+  font-size:.9rem;
+  color:var(--text-dark);
+  line-height:1.7;
+  margin:0;
+  font-weight:500;
+  width:100%;
+  flex-grow:1;
+}
+
+body.rtl .pillar-item{
+  text-align:right;
+  align-items:flex-end;
+}
+
+body.rtl .pillar-emoji{
+  align-self:flex-end;
+  margin-left:auto;
+  margin-right:0;
+}
+
+/* VISION SECTION - COMMUNITY PAGE */
+.vision-section{
+  background:linear-gradient(135deg, rgba(13,23,51,.95) 0%, rgba(13,23,51,.9) 100%);
+  padding:80px 20px;
+}
+
+.vision-container{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.vision-quote{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+}
+
+.vision-quote-open,
+.vision-quote-close{
+  flex-shrink:0;
+  opacity:0.6;
+}
+
+.vision-quote-open{
+  order:1;
+}
+
+.vision-quote p{
+  order:2;
+  font-size:1.35rem;
+  line-height:1.85;
+  color:rgba(255,255,255,.9);
+  font-weight:400;
+  font-style:italic;
+  letter-spacing:.3px;
+  margin:0;
+}
+
+.vision-quote-close{
+  order:3;
+  transform:scaleX(-1);
+}
+
+.vision-attribution{
+  order:4;
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-top:20px;
+}
+
+body.rtl .vision-quote-open{
+  order:3;
+  transform:scaleX(-1);
+}
+
+body.rtl .vision-quote-close{
+  order:1;
+  transform:none;
+}
+
+/* COMMUNITY PAGE SPECIFIC STYLES */
+.section-dark .cards-2 .pillar-card {
+  border-radius: 15px;
+}
+
+@media (max-width:960px){
+  .pillars-grid{
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+  
+  .pillar-item{
+    padding:24px;
+  }
+  
+  .pillar-emoji{
+    font-size:2rem;
+  }
+  
+  .pillar-item h4{
+    font-size:.95rem;
+  }
+  
+  .pillar-item p{
+    font-size:.85rem;
+  }
+  
+  .vision-quote p{
+    font-size:1.2rem;
+  }
+}
+
+@media (max-width:640px){
+  .pillars-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  
+  .pillar-item{
+    padding:24px;
+  }
+  
+  .pillar-emoji{
+    font-size:1.8rem;
+  }
+  
+  .pillar-item h4{
+    font-size:.9rem;
+  }
+  
+  .pillar-item p{
+    font-size:.8rem;
+  }
+  
+  .vision-section{
+    padding:60px 20px;
+  }
+  
+  .vision-quote p{
+    font-size:1rem;
+    line-height:1.7;
   }
 }
