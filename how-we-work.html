@@ -52,9 +52,13 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
       <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
-      <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-      <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
-      <a href="how-we-work.html" class="nav-link active" data-i18n="nav.howWeWork">How We Work</a>
+      <div class="nav-dropdown">
+        <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="projects.html" class="nav-dropdown-item" data-i18n="nav.projects">Projects</a>
+          <a href="how-we-work.html" class="nav-dropdown-item active" data-i18n="nav.howWeWork">How We Work</a>
+        </div>
+      </div>
       <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
       <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
       <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
@@ -69,9 +73,17 @@
     <button class="mobile-close" aria-label="Close">&times;</button>
     <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
     <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
-    <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-    <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
-    <a href="how-we-work.html" class="nav-link active" data-i18n="nav.howWeWork">How We Work</a>
+    <div class="mobile-nav-dropdown">
+      <div class="mobile-nav-trigger" data-i18n="nav.services">
+        Services
+        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="mobile-nav-submenu">
+        <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="how-we-work.html" class="nav-link active" data-i18n="nav.howWeWork">How We Work</a>
+      </div>
+    </div>
     <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
     <a href="network.html" class="nav-link" data-i18n="nav.network">Network</a>
     <a href="contact.html" class="nav-link nav-cta" data-i18n="nav.contact">Contact Us</a>
