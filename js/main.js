@@ -16,6 +16,29 @@ function debugLog(message, data) {
   }
 }
 
+// Preload and swap hero GIF once fully loaded
+function initHeroGifSwap() {
+  const heroBg = document.getElementById('heroBg');
+  if (!heroBg) return;
+  
+  const gifUrl = heroBg.getAttribute('data-gif-url');
+  if (!gifUrl) return;
+  
+  // Create image element to preload GIF
+  const gifImage = new Image();
+  gifImage.onload = function() {
+    // GIF is fully loaded, swap it in
+    heroBg.style.backgroundImage = `url('${gifUrl}')`;
+    heroBg.classList.add('gif-loaded');
+  };
+  gifImage.onerror = function() {
+    // If GIF fails to load, keep static image
+    console.warn('Failed to load hero GIF, keeping static image');
+  };
+  // Start loading the GIF
+  gifImage.src = gifUrl;
+}
+
 // Load translations from JSON file
 async function loadTranslations() {
   try {
@@ -189,12 +212,13 @@ function translatePage(lang) {
   debugLog(`Translation complete in ${duration}ms: ${translatedCount} translated, ${missingCount} missing`);
 
   // Trigger scroll reveal animations if available (use requestAnimationFrame to defer this)
-  if (window.revealObserver) {
+  // Only re-observe if reveal observer exists but elements aren't already observed
+  if (window.revealObserver && !window.revealElementsObserved) {
     requestAnimationFrame(() => {
       document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .how-phase').forEach(el => {
-        el.classList.remove('visible');
         window.revealObserver.observe(el);
       });
+      window.revealElementsObserved = true; // Flag to prevent duplicate observations
     });
   }
 }
@@ -208,6 +232,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!translationsLoaded) {
     console.error('[Gondwana] Failed to load translations - website may not translate properly');
   }
+  
+  // Initialize hero GIF preload (static image shown first, GIF swapped once loaded)
+  initHeroGifSwap();
   
   // Get saved language preference or default to English
   const savedLanguage = localStorage.getItem('gondwana-language') || 'en';
