@@ -396,6 +396,46 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   };
 
+  /* ── GALLERY LOAD MORE ──────────────────────────────────── */
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const galleryGrid = document.getElementById('galleryGrid');
+  let isLoading = false;
+  
+  if (loadMoreBtn && galleryGrid) {
+    const hiddenItems = galleryGrid.querySelectorAll('.gallery-hidden');
+    let itemsToShow = 6; // Show 6 more items at a time
+    let itemsShown = 0;
+    
+    const showMoreItems = () => {
+      if (isLoading) return;
+      isLoading = true;
+      
+      const itemsToReveal = Array.from(hiddenItems).slice(itemsShown, itemsShown + itemsToShow);
+      
+      itemsToReveal.forEach(item => {
+        item.classList.add('gallery-visible');
+      });
+      
+      itemsShown += itemsToShow;
+      
+      // If all items are shown, hide the load more button
+      if (itemsShown >= hiddenItems.length) {
+        loadMoreBtn.classList.add('all-loaded');
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.innerHTML = '<span data-i18n="gallery.allLoaded">All Items Loaded</span>';
+        // Translate the new text
+        const currentLang = localStorage.getItem('gondwana-language') || 'en';
+        if (translations[currentLang]?.gallery?.allLoaded) {
+          loadMoreBtn.innerHTML = translations[currentLang].gallery.allLoaded;
+        }
+      }
+      
+      isLoading = false;
+    };
+    
+    loadMoreBtn.addEventListener('click', showMoreItems);
+  }
+
 });
 
 /* ── TRANSLATION DIAGNOSTICS UTILITY ────────────────────────── */

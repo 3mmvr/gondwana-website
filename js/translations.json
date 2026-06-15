@@ -265,6 +265,13 @@
       "gallery_eyebrow": "Site Visuals",
       "gallery_headline": "From the Field"
     },
+    "gallery": {
+      "eyebrow": "Visual Gallery",
+      "headline": "Our Work in Action",
+      "description": "See our operations and impact across Africa",
+      "loadMore": "Load More",
+      "allLoaded": "All Items Loaded"
+    },
     "team_intro": {
       "eyebrow": "Our People",
       "headline": "Expert Team",
@@ -820,6 +827,13 @@
       "achievement4_desc": "من بين الأوائل الذين بدأوا مشاريع التعدين الميكانيكي في الصحراء الكبرى — وهي منطقة كانت تعتبر صعبة للغاية من الناحية اللوجستية — مما يدل على القدرة الاستثنائية للفريق في الظروف القاسية.",
       "gallery_eyebrow": "العناصر البصرية للموقع",
       "gallery_headline": "من الميدان"
+    },
+    "gallery": {
+      "eyebrow": "المعرض البصري",
+      "headline": "عملنا في الواقع",
+      "description": "شاهد عملياتنا وتأثيرنا عبر أفريقيا",
+      "loadMore": "تحميل المزيد",
+      "allLoaded": "تم تحميل جميع العناصر"
     },
     "team_intro": {
       "eyebrow": "فريقنا",
