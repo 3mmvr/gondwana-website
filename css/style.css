@@ -1016,7 +1016,26 @@ body.rtl .vision-quote-close{
 
 /* COMMUNITY PAGE SPECIFIC STYLES */
 
+/* BLOG GRID & CARDS */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.blog-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:all .3s cubic-bezier(.25,.46,.45,.94);}
+.blog-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.blog-card-image{position:relative;overflow:hidden;background:#f0f0f0;}
+.blog-card-image img{width:100%;height:280px;object-fit:cover;transition:transform .3s ease;}
+.blog-card:hover .blog-card-image img{transform:scale(1.05);}
+.blog-card-category{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);padding:6px 12px;border-radius:20px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+.blog-card-content{display:flex;flex-direction:column;flex:1;padding:28px 24px;}
+.blog-card-meta{display:flex;gap:16px;margin-bottom:12px;font-size:.8rem;color:var(--text-light);}
+.blog-card-date{font-weight:500;}
+.blog-card-author{display:flex;align-items:center;gap:4px;}
+.blog-card-author::before{content:'';display:inline-block;width:2px;height:2px;background:var(--text-light);border-radius:50%;margin:0 4px;}
+.blog-card-title{font-size:1.15rem;margin-bottom:12px;line-height:1.35;color:var(--text);}
+.blog-card-excerpt{font-size:.9rem;color:var(--text-light);line-height:1.6;flex:1;margin-bottom:16px;}
+.blog-card-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;transition:gap .2s cubic-bezier(.25,.46,.45,.94);}
+.blog-card-link:hover{gap:10px;}
+
 @media (max-width:960px){
+  .blog-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
   .pillars-grid{
     grid-template-columns:repeat(2, 1fr);
     gap:16px;
@@ -1040,6 +1059,14 @@ body.rtl .vision-quote-close{
   
   .vision-quote p{
     font-size:1.2rem;
+  }
+  
+  .blog-card-title{
+    font-size:1rem;
+  }
+  
+  .blog-card-excerpt{
+    font-size:.85rem;
   }
 }
 
@@ -1072,6 +1099,27 @@ body.rtl .vision-quote-close{
   .vision-quote p{
     font-size:1rem;
     line-height:1.7;
+  }
+  
+  .blog-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  
+  .blog-card-image img{
+    height:200px;
+  }
+  
+  .blog-card-content{
+    padding:20px 16px;
+  }
+  
+  .blog-card-title{
+    font-size:.95rem;
+  }
+  
+  .blog-card-excerpt{
+    font-size:.8rem;
   }
 
   .gallery-grid {
